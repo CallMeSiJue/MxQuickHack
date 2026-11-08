@@ -104,6 +104,13 @@ Cyberpunk 2077\archive\pc\mod\XY_QuickHack_icons.archive
 
 ## 7. 版本
 
+**1.0.1 Beta** — 图标改为原版风格（纯视觉改动，数值未动）。**未经验证**。
+
+- 自我擦除 → 原版 `ForceIgnoreTargets` 字形（蒙眼人头 + 感知波纹）
+- 破解扩散 → 原版 `Broadcast` 字形（卫星天线 + 外扩波）
+- 去掉了自制的着色、辉光和叠加装饰，回到原版的白字形模板印刷感
+- 图集部件名没变（`VH_SelfEraseIcon` / `VH_HackSpreadIcon`），TweakDB 记录零改动
+
 **1.0** — 首个正式版（已实测确认）。
 
 - 三档自我擦除（蓝 60 / 紫 120 / 橙 180 秒）
