@@ -1,0 +1,48 @@
+# =============================================================================
+#  VH Quickhacks — 自制图标（图集 + 记录）
+# =============================================================================
+#  做法完全照参考 mod（Gravitational Pull）：
+#    1. 用 Pillow 拿原版图标改出 PNG
+#    2. WolvenKit  import  → .xbm（CR2W 贴图）
+#    3. convert d          → .inkatlas（图集，部件名指向自己的贴图）
+#    4. pack               → VH_Quickhacks_icons.archive
+#    5. 下面这些记录把图集里的部件接到物品 / 菜单上
+#
+#  图集资源：
+#      base\vh_quickhacks\ui\vh_se_icon.inkatlas   部件 VH_SelfEraseIcon
+#      base\vh_quickhacks\ui\vh_sp_icon.inkatlas   部件 VH_HackSpreadIcon
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 自我擦除：原版「记忆清除」头部改冷紫 + 斜切划痕
+# -----------------------------------------------------------------------------
+
+UIIcon.VH_SelfEraseIcon:
+  $type: gamedataUIIcon_Record
+  atlasPartName: VH_SelfEraseIcon
+  atlasResourcePath: base\vh_quickhacks\ui\vh_se_icon.inkatlas
+
+ChoiceCaptionParts.VH_SelfEraseIcon:
+  $type: gamedataChoiceCaptionIconPart_Record
+  comment: ''
+  enumName: VH_SelfEraseIcon
+  mappinVariant: Mappins.InvalidVariant
+  texturePartID: UIIcon.VH_SelfEraseIcon
+  partType: ChoiceCaptionPartType.Icon
+
+# -----------------------------------------------------------------------------
+# 破解扩散：原版「连带传染」改琥珀 + 三圈扩散波纹
+# -----------------------------------------------------------------------------
+
+UIIcon.VH_HackSpreadIcon:
+  $type: gamedataUIIcon_Record
+  atlasPartName: VH_HackSpreadIcon
+  atlasResourcePath: base\vh_quickhacks\ui\vh_sp_icon.inkatlas
+
+ChoiceCaptionParts.VH_HackSpreadIcon:
+  $type: gamedataChoiceCaptionIconPart_Record
+  comment: ''
+  enumName: VH_HackSpreadIcon
+  mappinVariant: Mappins.InvalidVariant
+  texturePartID: UIIcon.VH_HackSpreadIcon
+  partType: ChoiceCaptionPartType.Icon

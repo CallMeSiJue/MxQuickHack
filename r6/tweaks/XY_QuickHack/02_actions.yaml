@@ -1,0 +1,232 @@
+# =============================================================================
+#  VH Quickhacks - ObjectActions + interaction UI
+# =============================================================================
+#  This file mirrors the structure used by the working reference mod
+#  "2.5 - Gravitational Pull" instead of inheriting QuickHack.CovertHack.
+#
+#  Why: vanilla decides at runtime whether a hack reveals (traces) the player
+#  (see the script symbol "isUntraceableHack" inside WillHackRevealPlayer).
+#  The reference mod sidesteps that logic entirely by:
+#    - writing a full gamedataObjectAction_Record (no $base)
+#    - using hackCategory = LegacyHack (the "uploaded by breaching" category)
+#    - borrowing vanilla's own tuned group: QuickHack.BaseCommsNoiseHack_inline7
+#
+#  Keep comments ASCII-only: Chinese written through PowerShell got mojibake'd
+#  before and that risks a YAML parse failure.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Hack category: LegacyHack enum value, our own record name (naming isolation)
+#   enumName must stay "LegacyHack" so it maps to the engine enum member.
+#   localizedDescription points at vanilla's covert label so the UI reads
+#   "Covert quickhack" in Chinese as well.
+# -----------------------------------------------------------------------------
+
+HackCategory.VH_LegacyHack:
+  $type: gamedataHackCategory_Record
+  enumName: LegacyHack
+  enumComment: All Hacks that are uploaded as a result of the Breaching Minigame
+  localizedDescription: LocKey#51405
+
+# -----------------------------------------------------------------------------
+# Self-Erase - puppet target
+# -----------------------------------------------------------------------------
+
+QuickHack.VH_SelfEraseHack:
+  $type: gamedataObjectAction_Record
+  actionName: VH_SelfErase
+  hackCategory: HackCategory.VH_LegacyHack
+  interactionLayer: remote
+  objectActionType: ObjectActionType.PuppetQuickHack
+  objectActionUI: Interactions.VH_SelfEraseHack
+  priority: 4
+  activationTime:
+    - QuickHack.QuickHack_inline0
+    - QuickHack.VH_SelfEraseHack_inline0
+  completionEffects:
+    - QuickHack.QuickHack_inline2
+    - QuickHack.QuickHack_inline6
+    - QuickHack.QuickHack_inline8
+    - QuickHack.QuickHack_inline9
+    - QuickHack.ControlHack_inline5
+    - QuickHack.VH_SelfEraseHack_inline3
+  costs:
+    - QuickHack.VH_SelfEraseHack_inline1
+  durationTime: []
+  instigatorActivePrereqs: []
+  instigatorPrereqs:
+    - QuickHack.QuickHack_inline1
+  interruptionPrereqs: []
+  rewards: []
+  startEffects:
+    - QuickHack.QuickHack_inline10
+    - QuickHack.VH_SelfEraseHack_inline3
+  targetActivePrereqs:
+    - Prereqs.QuickHackUploadingPrereq
+    - Prereqs.ChimeraNoQuickHackPrereq
+  targetPrereqs: []
+  # awarenessCost deliberately omitted:
+  #   ScriptableDeviceAction.GetAwarenessCost looks the flat up by foreign key
+  #   and returns 0.0 when it does not exist -> no detection bump on upload,
+  #   and no "+N%" reveal row in the scan menu. (TeleportTakedown notes.)
+  isQuickHack: True
+
+# Upload time: +2.0 s
+QuickHack.VH_SelfEraseHack_inline0:
+  $type: gamedataConstantStatModifier_Record
+  value: 2.0
+  modifierType: Additive
+  statType: BaseStats.QuickHackUpload
+
+# RAM cost: 8
+QuickHack.VH_SelfEraseHack_inline1:
+  $type: gamedataStatPoolCost_Record
+  statPool: BaseStatPools.Memory
+  costMods:
+    - QuickHack.MemoryCostReductionMod
+    - QuickHack.ConsumableCostReduction
+    - QuickHack.TargetResistanceCovert
+    - QuickHack.VH_SelfEraseHack_inline2
+
+QuickHack.VH_SelfEraseHack_inline2:
+  $type: gamedataConstantStatModifier_Record
+  value: 8
+  modifierType: Additive
+  statType: BaseStats.Memory
+
+# Apply the status effect to the target
+QuickHack.VH_SelfEraseHack_inline3:
+  $type: gamedataObjectActionEffect_Record
+  recipient: ObjectActionReference.Target
+  statusEffect: BaseStatusEffect.VH_SelfErase
+
+# -----------------------------------------------------------------------------
+# Self-Erase - device target (cameras / turrets)
+# -----------------------------------------------------------------------------
+
+DeviceAction.VH_SelfEraseDeviceHack:
+  $base: DeviceAction.DeviceQuickHack
+  actionName: VH_SelfEraseDevice
+  priority: 4
+  objectActionUI: Interactions.VH_SelfEraseHack
+  targetActivePrereqs:
+    - Prereqs.ChimeraNoQuickHackPrereq
+  activationTime:
+    - QuickHack.HackingResistanceUploadModifier
+    - QuickHack.VH_SelfEraseHack_inline0
+  costs:
+    - QuickHack.VH_SelfEraseHack_inline1
+  completionEffects:
+    - !append-once QuickHack.VH_SelfEraseHack_inline3
+  deviceHackCategory: DeviceHacks.CovertHack
+  hackTier: DeviceHacks.Tier5DeviceHack
+
+# -----------------------------------------------------------------------------
+# Hack Diffusion - puppet target
+# -----------------------------------------------------------------------------
+
+QuickHack.VH_HackSpreadHack:
+  $type: gamedataObjectAction_Record
+  actionName: VH_HackSpread
+  hackCategory: HackCategory.VH_LegacyHack
+  interactionLayer: remote
+  objectActionType: ObjectActionType.PuppetQuickHack
+  objectActionUI: Interactions.VH_HackSpreadHack
+  priority: 4
+  activationTime:
+    - QuickHack.QuickHack_inline0
+    - QuickHack.VH_HackSpreadHack_inline0
+  completionEffects:
+    - QuickHack.QuickHack_inline2
+    - QuickHack.QuickHack_inline6
+    - QuickHack.QuickHack_inline8
+    - QuickHack.QuickHack_inline9
+    - QuickHack.ControlHack_inline5
+  costs:
+    - QuickHack.VH_HackSpreadHack_inline1
+  durationTime: []
+  instigatorActivePrereqs: []
+  instigatorPrereqs:
+    - QuickHack.QuickHack_inline1
+  interruptionPrereqs: []
+  rewards: []
+  startEffects:
+    - QuickHack.QuickHack_inline10
+  targetActivePrereqs:
+    - Prereqs.QuickHackUploadingPrereq
+    - Prereqs.ChimeraNoQuickHackPrereq
+  targetPrereqs: []
+  # awarenessCost deliberately omitted:
+  #   ScriptableDeviceAction.GetAwarenessCost looks the flat up by foreign key
+  #   and returns 0.0 when it does not exist -> no detection bump on upload,
+  #   and no "+N%" reveal row in the scan menu. (TeleportTakedown notes.)
+  isQuickHack: True
+
+# Upload time: +1.5 s
+QuickHack.VH_HackSpreadHack_inline0:
+  $type: gamedataConstantStatModifier_Record
+  value: 1.5
+  modifierType: Additive
+  statType: BaseStats.QuickHackUpload
+
+# RAM cost: 12
+QuickHack.VH_HackSpreadHack_inline1:
+  $type: gamedataStatPoolCost_Record
+  statPool: BaseStatPools.Memory
+  costMods:
+    - QuickHack.MemoryCostReductionMod
+    - QuickHack.ConsumableCostReduction
+    - QuickHack.TargetResistanceControl
+    - QuickHack.VH_HackSpreadHack_inline2
+
+QuickHack.VH_HackSpreadHack_inline2:
+  $type: gamedataConstantStatModifier_Record
+  value: 12
+  modifierType: Additive
+  statType: BaseStats.Memory
+
+# The spreading itself runs in the script on upload completion, so there is
+# deliberately no status effect here.
+
+# -----------------------------------------------------------------------------
+# Hack Diffusion - device target
+# -----------------------------------------------------------------------------
+
+DeviceAction.VH_HackSpreadDeviceHack:
+  $base: DeviceAction.DeviceQuickHack
+  actionName: VH_HackSpreadDevice
+  priority: 4
+  objectActionUI: Interactions.VH_HackSpreadHack
+  targetActivePrereqs:
+    - Prereqs.ChimeraNoQuickHackPrereq
+  activationTime:
+    - QuickHack.HackingResistanceUploadModifier
+    - QuickHack.VH_HackSpreadHack_inline0
+  costs:
+    - QuickHack.VH_HackSpreadHack_inline1
+  deviceHackCategory: DeviceHacks.ControlHack
+  hackTier: DeviceHacks.Tier5DeviceHack
+
+# -----------------------------------------------------------------------------
+# Interaction rows
+#   caption / description are localization fields: they must point at numeric
+#   LocKeys, otherwise the UI shows LOCKEY#<hash>.
+# -----------------------------------------------------------------------------
+
+Interactions.VH_SelfEraseHack:
+  $type: gamedataInteractionBase_Record
+  action: Choice1
+  captionIcon: ChoiceCaptionParts.VH_SelfEraseIcon
+  name: VH_SelfEraseHack
+  prereqID: ''
+  caption: LocKey#990800001
+  description: LocKey#990800002
+
+Interactions.VH_HackSpreadHack:
+  $type: gamedataInteractionBase_Record
+  action: Choice1
+  captionIcon: ChoiceCaptionParts.VH_HackSpreadIcon
+  name: VH_HackSpreadHack
+  prereqID: ''
+  caption: LocKey#990800003
+  description: LocKey#990800004

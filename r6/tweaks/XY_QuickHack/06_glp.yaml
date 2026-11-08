@@ -1,0 +1,56 @@
+# =============================================================================
+#  VH Quickhacks — 物品悬浮说明（EquipmentGLP）
+# =============================================================================
+#  原版写法参照：equipment_abilities.tweak 里的 EquipmentGLP.*Program
+#  物品 OnAttach 挂上这个包后，悬浮时那段说明文字就是这里的 UIData。
+#
+#  本地化键全部用 VH_ 前缀，和 03_items.yaml 里的一致。
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 自我擦除
+# -----------------------------------------------------------------------------
+
+EquipmentGLP.VH_SelfEraseProgram:
+  $type: gamedataGameplayLogicPackage_Record
+  stackable: False
+  UIData: EquipmentGLP.VH_SelfEraseProgram_inline0
+  animationWrapperOverrides: []
+  effectors: []
+  items: []
+  statPools: []
+  stats: []
+
+EquipmentGLP.VH_SelfEraseProgram_inline0:
+  $type: gamedataGameplayLogicPackageUIData_Record
+  iconPath: ability_utility
+  localizedName: LocKey#990800001
+  localizedDescription: LocKey#990800002
+  floatValues: []
+  intValues: []
+  nameValues: []
+  stats: []
+
+# -----------------------------------------------------------------------------
+# 破解扩散
+# -----------------------------------------------------------------------------
+
+EquipmentGLP.VH_HackSpreadProgram:
+  $type: gamedataGameplayLogicPackage_Record
+  stackable: False
+  UIData: EquipmentGLP.VH_HackSpreadProgram_inline0
+  animationWrapperOverrides: []
+  effectors: []
+  items: []
+  statPools: []
+  stats: []
+
+EquipmentGLP.VH_HackSpreadProgram_inline0:
+  $type: gamedataGameplayLogicPackageUIData_Record
+  iconPath: ability_utility
+  localizedName: LocKey#990800003
+  localizedDescription: LocKey#990800004
+  floatValues: []
+  intValues: []
+  nameValues: []
+  stats: []

@@ -1,0 +1,669 @@
+# 把两枚破解挂到全部可破解人形敌人的角色记录上（原版快速破解就是这样挂的）。
+# 名单 = 参考 mod Gravitational Pull 已验证的 76 条 + 本机原版数据扫出的 26 条，合并去重。
+# 生成方式见 README（tools\\redmod\\tweaks 全文检索 objectActions/QuickHack）。
+
+Character.aldecaldos_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Android_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.animals_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.arasaka_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.arasaka_base_mm:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.arasaka_sumo_hmelee2_fists_mb_rare:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.cbj_ep1_011_cyberjunkie:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.cbj_ep1_cyberjunkie_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Cerberus_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Drone_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ep1_scavenger_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ep1_voodooboys_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.generic_street_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Grayson:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ina_09_jason_2:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Interactable_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.kangtao_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.kurtz:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.kurtz_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_bls_ina_se1_07_cyberpsycho_1:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_bls_ina_se1_08_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_bls_ina_se1_22_psycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_cct_dtn_03_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_cct_dtn_07_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_hey_spr_04_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_hey_spr_06_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_pac_cvi_08_psycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_pac_cvi_15_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_std_arr_06_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_std_rcr_11_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_kab_02_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_kab_08_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_lch_06_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_nid_03_shard_psycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_nid_15_psycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_nid_15_psycho_02:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_nid_15_psycho_03:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ma_wat_nid_22_monk:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.maelstrom_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.main_boss_adam_smasher:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.main_boss_chimera:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.main_boss_oda:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.main_boss_royce:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.main_boss_sasquatch:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.maxtac_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Mech_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Mechanical_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.militech_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq005_police_officer_01:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq008_6th_street_male:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq021_corpo:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq030_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq303_scav_2:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq304_bennett:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.mq306_angie:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ncpd_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ncpd_base_android:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.ncpd_base_minotaur:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.netwatch_base_ma:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Placide:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.policeman_TESTONLY:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.q110_boxing_robot:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.q304_kurt_miniboss:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Quest_Combat_NPC_Base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.rcr_05_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.scavenger_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.scrappers_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.security_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sixth_street_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sq023_vasquez:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_01_nika:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_01_target:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_06_cop:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_08_kgb_boss:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_12_alan_noel:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_12_droid_miniboss:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_ep1_13_fiona:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_std_arr_06_kangtao_ranger1_ranged2_dian_ma:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_std_arr_06_karl_greenski:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_wat_kab_01_enemy_medium_range_m_bouncer:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_wat_kab_03_solo:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.sts_wat_nid_01_cyberpsycho:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.the_mox_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Training_Robot:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.trauma_team_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.tyger_claws_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.valentinos_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.voodooboys_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.we_ep1_01_mini_boss_1st_phase:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.we_ep1_01_mini_boss_2nd_phase:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.we_ep1_05_mini_boss:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.we_ep1_17_miniboss:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Woodman:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.wraiths_base:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+
+Character.Yorinobu:
+  objectActions:
+    - !append-once QuickHack.VH_SelfEraseHack
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack
+    - !append-once QuickHack.VH_HackSpreadHack
+

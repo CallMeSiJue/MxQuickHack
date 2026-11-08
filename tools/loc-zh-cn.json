@@ -1,0 +1,68 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.1",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-08T16:00:00.0000000Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "zh-cn.json"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "JsonResource",
+      "cookingPlatform": "PLATFORM_None",
+      "root": {
+        "HandleId": "0",
+        "Data": {
+          "$type": "localizationPersistenceOnScreenEntries",
+          "entries": [
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "自我擦除",
+              "maleVariant": "自我擦除",
+              "primaryKey": "990800001",
+              "secondaryKey": "vh_self_erase_name"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "将自己从目标的视野、听觉中移除，对方无法发现你。持续时间3分钟。",
+              "maleVariant": "将自己从目标的视野、听觉中移除，对方无法发现你。持续时间3分钟。",
+              "primaryKey": "990800002",
+              "secondaryKey": "vh_self_erase_desc"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "破解扩散",
+              "maleVariant": "破解扩散",
+              "primaryKey": "990800003",
+              "secondaryKey": "vh_hack_spread_name"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "将目标身上已有的快速破解效果，传递到周围的敌人与设备，半径20米。",
+              "maleVariant": "将目标身上已有的快速破解效果，传递到周围的敌人与设备，半径20米。",
+              "primaryKey": "990800004",
+              "secondaryKey": "vh_hack_spread_desc"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "武器飞来",
+              "maleVariant": "武器飞来",
+              "primaryKey": "990800005",
+              "secondaryKey": "vh_weapon_pull_name"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "夺取目标手中的武器，直接转移到自己的背包。",
+              "maleVariant": "夺取目标手中的武器，直接转移到自己的背包。",
+              "primaryKey": "990800006",
+              "secondaryKey": "vh_weapon_pull_desc"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

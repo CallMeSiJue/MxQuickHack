@@ -1,0 +1,118 @@
+# =============================================================================
+#  VH Quickhacks - items
+# =============================================================================
+#  Prices are NOT overridden: inheriting Items.CovertHack gives exactly the same
+#  price composition vanilla legendary covert programs use
+#  (Price.BaseHackPrice + Price.ItemQualityMultiplier +
+#    Price.BuyPrice_StreetCred_Discount + Price.CovertHackMultiplier).
+#
+#  shardType is deliberately SHARED across the three Self-Erase tiers, exactly
+#  like vanilla Memory Wipe (shardType "MemoryWipe" on Lvl2/Lvl3/Lvl4):
+#  ItemModificationSystem.RemoveOtherShards uninstalls other programs with the
+#  same shardType, so only one tier of the same hack can sit in the deck at a
+#  time. Hack Diffusion keeps its own separate shardType.
+#
+#  Both icon fields are required (MAKING_CUSTOM_QUICKHACKS.md 1.7):
+#    icon      TweakDBID pointing at our UIIcon record
+#    iconPath  bare CName that resolves to UIIcon.<name>
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Self-Erase - Rare (blue), 60 s
+# -----------------------------------------------------------------------------
+
+Items.VH_SelfEraseLvl2Program:
+  $base: Items.CovertHack
+  displayName: LocKey#990800001
+  localizedDescription: LocKey#990800002
+  quality: Quality.Rare
+  shardType: VH_SelfErase
+  icon: UIIcon.VH_SelfEraseIcon
+  iconPath: VH_SelfEraseIcon
+  hideCooldownUI: True
+  hideDurationUI: False
+  tags:
+    - !append-once Tier2Shard
+    - !append-once VH_SelfErase
+  OnAttach:
+    - EquipmentGLP.UntraceableHack
+    - EquipmentGLP.VH_SelfEraseProgram
+  objectActions:
+    - QuickHack.VH_SelfEraseLvl2Hack
+    - DeviceAction.VH_SelfEraseLvl2DeviceHack
+    - ItemAction.ProgramDisassemble
+
+# -----------------------------------------------------------------------------
+# Self-Erase - Epic (purple), 120 s
+# -----------------------------------------------------------------------------
+
+Items.VH_SelfEraseLvl3Program:
+  $base: Items.CovertHack
+  displayName: LocKey#990800001
+  localizedDescription: LocKey#990800002
+  quality: Quality.Epic
+  shardType: VH_SelfErase
+  icon: UIIcon.VH_SelfEraseIcon
+  iconPath: VH_SelfEraseIcon
+  hideCooldownUI: True
+  hideDurationUI: False
+  tags:
+    - !append-once Tier3Shard
+    - !append-once VH_SelfErase
+  OnAttach:
+    - EquipmentGLP.UntraceableHack
+    - EquipmentGLP.VH_SelfEraseProgram
+  objectActions:
+    - QuickHack.VH_SelfEraseLvl3Hack
+    - DeviceAction.VH_SelfEraseLvl3DeviceHack
+    - ItemAction.ProgramDisassemble
+
+# -----------------------------------------------------------------------------
+# Self-Erase - Legendary (orange), 180 s
+# -----------------------------------------------------------------------------
+
+Items.VH_SelfEraseProgram:
+  $base: Items.CovertHack
+  displayName: LocKey#990800001
+  localizedDescription: LocKey#990800002
+  quality: Quality.Legendary
+  shardType: VH_SelfErase
+  icon: UIIcon.VH_SelfEraseIcon
+  iconPath: VH_SelfEraseIcon
+  hideCooldownUI: True
+  hideDurationUI: False
+  tags:
+    - !append-once Tier4Shard
+    - !append-once VH_SelfErase
+  OnAttach:
+    - EquipmentGLP.UntraceableHack
+    - EquipmentGLP.VH_SelfEraseProgram
+  objectActions:
+    - QuickHack.VH_SelfEraseHack
+    - DeviceAction.VH_SelfEraseDeviceHack
+    - ItemAction.ProgramDisassemble
+
+# -----------------------------------------------------------------------------
+# Hack Diffusion - Legendary (orange)
+# -----------------------------------------------------------------------------
+
+Items.VH_HackSpreadProgram:
+  $base: Items.CovertHack
+  displayName: LocKey#990800003
+  localizedDescription: LocKey#990800004
+  quality: Quality.Legendary
+  shardType: VH_HackSpread
+  icon: UIIcon.VH_HackSpreadIcon
+  iconPath: VH_HackSpreadIcon
+  hideCooldownUI: True
+  hideDurationUI: True
+  tags:
+    - !append-once Tier4Shard
+    - !append-once VH_HackSpread
+  OnAttach:
+    - EquipmentGLP.UntraceableHack
+    - EquipmentGLP.VH_HackSpreadProgram
+  objectActions:
+    - QuickHack.VH_HackSpreadHack
+    - DeviceAction.VH_HackSpreadDeviceHack
+    - ItemAction.ProgramDisassemble

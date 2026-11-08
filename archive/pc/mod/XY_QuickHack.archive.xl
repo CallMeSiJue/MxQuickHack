@@ -1,0 +1,4 @@
+﻿localization:
+  onscreens:
+    zh-cn: base\vh_quickhacks\localization\zh-cn.json
+    en-us: base\vh_quickhacks\localization\en-us.json

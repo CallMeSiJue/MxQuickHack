@@ -1,0 +1,14 @@
+﻿# build artifacts / local tooling
+.build/
+dist/
+icons/
+参考mod/
+*.zip
+*.rar
+
+# vortex / deploy markers
+__folder_managed_by_vortex
+
+# windows
+Thumbs.db
+desktop.ini

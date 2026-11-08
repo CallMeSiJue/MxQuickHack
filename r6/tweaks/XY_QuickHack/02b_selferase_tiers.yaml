@@ -1,0 +1,172 @@
+# =============================================================================
+#  VH Quickhacks - Self-Erase, lower tiers (Rare 60 s / Epic 120 s)
+# =============================================================================
+#  Mirrors the legendary records in 02_actions.yaml exactly; only the action
+#  name, priority, RAM cost, upload time, device tier and the applied status
+#  effect differ. Vanilla Memory Wipe does the same thing
+#  (MemoryWipeLvl2/Lvl3/Lvl4 sharing one interaction row).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Rare (blue) - puppet target, 60 s, RAM 6
+# -----------------------------------------------------------------------------
+
+QuickHack.VH_SelfEraseLvl2Hack:
+  $type: gamedataObjectAction_Record
+  actionName: VH_SelfEraseLvl2
+  hackCategory: HackCategory.VH_LegacyHack
+  interactionLayer: remote
+  objectActionType: ObjectActionType.PuppetQuickHack
+  objectActionUI: Interactions.VH_SelfEraseHack
+  priority: 2
+  activationTime:
+    - QuickHack.QuickHack_inline0
+    - QuickHack.VH_SelfEraseLvl2Hack_inline0
+  completionEffects:
+    - QuickHack.QuickHack_inline2
+    - QuickHack.QuickHack_inline6
+    - QuickHack.QuickHack_inline8
+    - QuickHack.QuickHack_inline9
+    - QuickHack.ControlHack_inline5
+    - QuickHack.VH_SelfEraseLvl2Hack_inline3
+  costs:
+    - QuickHack.VH_SelfEraseLvl2Hack_inline1
+  durationTime: []
+  instigatorActivePrereqs: []
+  instigatorPrereqs:
+    - QuickHack.QuickHack_inline1
+  interruptionPrereqs: []
+  rewards: []
+  startEffects:
+    - QuickHack.QuickHack_inline10
+    - QuickHack.VH_SelfEraseLvl2Hack_inline3
+  targetActivePrereqs:
+    - Prereqs.QuickHackUploadingPrereq
+    - Prereqs.ChimeraNoQuickHackPrereq
+  targetPrereqs: []
+  isQuickHack: True
+
+QuickHack.VH_SelfEraseLvl2Hack_inline0:
+  $type: gamedataConstantStatModifier_Record
+  value: 1.0
+  modifierType: Additive
+  statType: BaseStats.QuickHackUpload
+
+QuickHack.VH_SelfEraseLvl2Hack_inline1:
+  $type: gamedataStatPoolCost_Record
+  statPool: BaseStatPools.Memory
+  costMods:
+    - QuickHack.MemoryCostReductionMod
+    - QuickHack.ConsumableCostReduction
+    - QuickHack.TargetResistanceCovert
+    - QuickHack.VH_SelfEraseLvl2Hack_inline2
+
+QuickHack.VH_SelfEraseLvl2Hack_inline2:
+  $type: gamedataConstantStatModifier_Record
+  value: 6
+  modifierType: Additive
+  statType: BaseStats.Memory
+
+QuickHack.VH_SelfEraseLvl2Hack_inline3:
+  $type: gamedataObjectActionEffect_Record
+  recipient: ObjectActionReference.Target
+  statusEffect: BaseStatusEffect.VH_SelfEraseLvl2
+
+DeviceAction.VH_SelfEraseLvl2DeviceHack:
+  $base: DeviceAction.DeviceQuickHack
+  actionName: VH_SelfEraseLvl2Device
+  priority: 2
+  objectActionUI: Interactions.VH_SelfEraseHack
+  targetActivePrereqs:
+    - Prereqs.ChimeraNoQuickHackPrereq
+  activationTime:
+    - QuickHack.HackingResistanceUploadModifier
+    - QuickHack.VH_SelfEraseLvl2Hack_inline0
+  costs:
+    - QuickHack.VH_SelfEraseLvl2Hack_inline1
+  completionEffects:
+    - !append-once QuickHack.VH_SelfEraseLvl2Hack_inline3
+  deviceHackCategory: DeviceHacks.CovertHack
+  hackTier: DeviceHacks.Tier3DeviceHack
+
+# -----------------------------------------------------------------------------
+# Epic (purple) - puppet target, 120 s, RAM 7
+# -----------------------------------------------------------------------------
+
+QuickHack.VH_SelfEraseLvl3Hack:
+  $type: gamedataObjectAction_Record
+  actionName: VH_SelfEraseLvl3
+  hackCategory: HackCategory.VH_LegacyHack
+  interactionLayer: remote
+  objectActionType: ObjectActionType.PuppetQuickHack
+  objectActionUI: Interactions.VH_SelfEraseHack
+  priority: 3
+  activationTime:
+    - QuickHack.QuickHack_inline0
+    - QuickHack.VH_SelfEraseLvl3Hack_inline0
+  completionEffects:
+    - QuickHack.QuickHack_inline2
+    - QuickHack.QuickHack_inline6
+    - QuickHack.QuickHack_inline8
+    - QuickHack.QuickHack_inline9
+    - QuickHack.ControlHack_inline5
+    - QuickHack.VH_SelfEraseLvl3Hack_inline3
+  costs:
+    - QuickHack.VH_SelfEraseLvl3Hack_inline1
+  durationTime: []
+  instigatorActivePrereqs: []
+  instigatorPrereqs:
+    - QuickHack.QuickHack_inline1
+  interruptionPrereqs: []
+  rewards: []
+  startEffects:
+    - QuickHack.QuickHack_inline10
+    - QuickHack.VH_SelfEraseLvl3Hack_inline3
+  targetActivePrereqs:
+    - Prereqs.QuickHackUploadingPrereq
+    - Prereqs.ChimeraNoQuickHackPrereq
+  targetPrereqs: []
+  isQuickHack: True
+
+QuickHack.VH_SelfEraseLvl3Hack_inline0:
+  $type: gamedataConstantStatModifier_Record
+  value: 1.5
+  modifierType: Additive
+  statType: BaseStats.QuickHackUpload
+
+QuickHack.VH_SelfEraseLvl3Hack_inline1:
+  $type: gamedataStatPoolCost_Record
+  statPool: BaseStatPools.Memory
+  costMods:
+    - QuickHack.MemoryCostReductionMod
+    - QuickHack.ConsumableCostReduction
+    - QuickHack.TargetResistanceCovert
+    - QuickHack.VH_SelfEraseLvl3Hack_inline2
+
+QuickHack.VH_SelfEraseLvl3Hack_inline2:
+  $type: gamedataConstantStatModifier_Record
+  value: 7
+  modifierType: Additive
+  statType: BaseStats.Memory
+
+QuickHack.VH_SelfEraseLvl3Hack_inline3:
+  $type: gamedataObjectActionEffect_Record
+  recipient: ObjectActionReference.Target
+  statusEffect: BaseStatusEffect.VH_SelfEraseLvl3
+
+DeviceAction.VH_SelfEraseLvl3DeviceHack:
+  $base: DeviceAction.DeviceQuickHack
+  actionName: VH_SelfEraseLvl3Device
+  priority: 3
+  objectActionUI: Interactions.VH_SelfEraseHack
+  targetActivePrereqs:
+    - Prereqs.ChimeraNoQuickHackPrereq
+  activationTime:
+    - QuickHack.HackingResistanceUploadModifier
+    - QuickHack.VH_SelfEraseLvl3Hack_inline0
+  costs:
+    - QuickHack.VH_SelfEraseLvl3Hack_inline1
+  completionEffects:
+    - !append-once QuickHack.VH_SelfEraseLvl3Hack_inline3
+  deviceHackCategory: DeviceHacks.CovertHack
+  hackTier: DeviceHacks.Tier4DeviceHack

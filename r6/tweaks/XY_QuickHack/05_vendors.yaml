@@ -1,0 +1,76 @@
+# =============================================================================
+#  VH Quickhacks - acquisition: chip vendors (tech stores)
+# =============================================================================
+#  The three vanilla tech stores already sell quickhack programs:
+#      Vendors.wat_kab_techstore_01
+#      Vendors.std_arr_techstore_01
+#      Vendors.std_rcr_techstore_01
+#
+#  Pattern: define the stock entry as a named gamedataVendorItem_Record, then
+#  append it to each store's itemStock with !append-once.
+#
+#  Availability gating mirrors vanilla: each quality tier keeps the same
+#  Vendors.*QuickhackAvailability prereq vanilla uses for that quality, so the
+#  shards show up on the same level / street-cred curve as the real ones.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Stock entries
+# -----------------------------------------------------------------------------
+
+Vendors.VH_SelfEraseLvl2Stock:
+  $type: gamedataVendorItem_Record
+  item: Items.VH_SelfEraseLvl2Program
+  quantity:
+    - Vendors.Always_Present
+  generationPrereqs:
+    - Vendors.RareQuickhackAvailability
+
+Vendors.VH_SelfEraseLvl3Stock:
+  $type: gamedataVendorItem_Record
+  item: Items.VH_SelfEraseLvl3Program
+  quantity:
+    - Vendors.Always_Present
+  generationPrereqs:
+    - Vendors.EpicQuickhackAvailability
+
+Vendors.VH_SelfEraseStock:
+  $type: gamedataVendorItem_Record
+  item: Items.VH_SelfEraseProgram
+  quantity:
+    - Vendors.Always_Present
+  generationPrereqs:
+    - Vendors.LegendaryQuickhackAvailability
+
+Vendors.VH_HackSpreadStock:
+  $type: gamedataVendorItem_Record
+  item: Items.VH_HackSpreadProgram
+  quantity:
+    - Vendors.Always_Present
+  generationPrereqs:
+    - Vendors.LegendaryQuickhackAvailability
+
+# -----------------------------------------------------------------------------
+# Attach to the three chip vendors
+# -----------------------------------------------------------------------------
+
+Vendors.wat_kab_techstore_01:
+  itemStock:
+    - !append-once Vendors.VH_SelfEraseLvl2Stock
+    - !append-once Vendors.VH_SelfEraseLvl3Stock
+    - !append-once Vendors.VH_SelfEraseStock
+    - !append-once Vendors.VH_HackSpreadStock
+
+Vendors.std_arr_techstore_01:
+  itemStock:
+    - !append-once Vendors.VH_SelfEraseLvl2Stock
+    - !append-once Vendors.VH_SelfEraseLvl3Stock
+    - !append-once Vendors.VH_SelfEraseStock
+    - !append-once Vendors.VH_HackSpreadStock
+
+Vendors.std_rcr_techstore_01:
+  itemStock:
+    - !append-once Vendors.VH_SelfEraseLvl2Stock
+    - !append-once Vendors.VH_SelfEraseLvl3Stock
+    - !append-once Vendors.VH_SelfEraseStock
+    - !append-once Vendors.VH_HackSpreadStock

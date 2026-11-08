@@ -1,0 +1,68 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.1",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-08T16:00:00.0000000Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "en-us.json"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "JsonResource",
+      "cookingPlatform": "PLATFORM_None",
+      "root": {
+        "HandleId": "0",
+        "Data": {
+          "$type": "localizationPersistenceOnScreenEntries",
+          "entries": [
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "Self-Erase",
+              "maleVariant": "Self-Erase",
+              "primaryKey": "990800001",
+              "secondaryKey": "vh_self_erase_name"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "Removes you from the target's sight and hearing. The target can no longer detect you. Lasts 3 minutes.",
+              "maleVariant": "Removes you from the target's sight and hearing. The target can no longer detect you. Lasts 3 minutes.",
+              "primaryKey": "990800002",
+              "secondaryKey": "vh_self_erase_desc"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "Hack Diffusion",
+              "maleVariant": "Hack Diffusion",
+              "primaryKey": "990800003",
+              "secondaryKey": "vh_hack_spread_name"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "Passes the quickhack effects already on the target to nearby enemies and devices within 20 meters.",
+              "maleVariant": "Passes the quickhack effects already on the target to nearby enemies and devices within 20 meters.",
+              "primaryKey": "990800004",
+              "secondaryKey": "vh_hack_spread_desc"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "Weapon Pull",
+              "maleVariant": "Weapon Pull",
+              "primaryKey": "990800005",
+              "secondaryKey": "vh_weapon_pull_name"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "femaleVariant": "Takes the weapon out of the target's hands and transfers it straight into your inventory.",
+              "maleVariant": "Takes the weapon out of the target's hands and transfers it straight into your inventory.",
+              "primaryKey": "990800006",
+              "secondaryKey": "vh_weapon_pull_desc"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

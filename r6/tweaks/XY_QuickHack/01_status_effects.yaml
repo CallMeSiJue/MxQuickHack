@@ -1,0 +1,190 @@
+# =============================================================================
+#  XY Quick Hack - Self-Erase status effects (three tiers)
+# =============================================================================
+#  Hand-written records, exactly like the reference mods do it
+#  (Gravitational Pull and Teleport Takedown both write complete
+#   gamedataStatusEffect_Record entries with "packages: []" - no $base).
+#
+#  THE TAGS ARE THE WHOLE POINT. Two independent mechanisms read them:
+#
+#  1. "Stealth"  -> NPC\NPCPuppet.script:1749
+#         if( !evt.isAppliedOnSpawn && evt.instigatorEntityID == GetPlayerID()
+#             && !gmplTags.Contains( 'Stealth' ) )
+#         { ... DelayEvent( NonStealthQuickHackVictimEvent, 0.1 ) ... }
+#     and :1816
+#         OnNonStealthQuickHackVictimEvent:
+#             if( !RevealPlayerPositionIfNeeded(...) ) AlertPuppet( this );
+#             AIActionHelper.TryChangingAttitudeToHostile( this, player );   <-- outside the if
+#     Because the hostility call sits OUTSIDE the if, wrapping
+#     RevealPlayerPositionIfNeeded only blocks the alert - not the hostility.
+#     The only way to skip the whole block is carrying the Stealth tag.
+#
+#  2. "Blind"    -> what IsBlinded() checks. Without it the game tears down our
+#     detection overwrite on the next reevaluation and the target sees us again.
+#
+#  "ClearThreats" is what vanilla Memory Wipe carries to break combat.
+#  "VH_SelfErase" is the tag our redscript matches on.
+#
+#  Duration group is the simple single-modifier shape Teleport Takedown uses
+#  (Gravitational Pull additionally pulls in BaseQuickHackDuration_inline0;
+#   that is its choice, not a requirement).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Rare (blue) - 60 s
+# -----------------------------------------------------------------------------
+
+BaseStatusEffect.VH_SelfEraseLvl2:
+  $type: gamedataStatusEffect_Record
+  duration: BaseStatusEffect.VH_SelfEraseLvl2Duration
+  dynamicDuration: False
+  isAffectedByTimeDilationNPC: True
+  isAffectedByTimeDilationPlayer: True
+  maxStacks: RTDB.StatusEffect_inline0
+  reapplyPackagesOnMaxStacks: True
+  removeAllStacksWhenDurationEnds: False
+  removeOnStoryTier: False
+  replicated: True
+  savable: False
+  statusEffectType: BaseStatusEffectTypes.Blind
+  uiData: BaseStatusEffect.VH_SelfEraseUI
+  stopActiveSfxOnDeactivate: True
+  debugTags: []
+  gameplayTags:
+    - Debuff
+    - Quickhack
+    - Stealth
+    - Blind
+    - ClearThreats
+    - VH_SelfErase
+  packages: []
+  SFX: []
+  VFX: []
+
+BaseStatusEffect.VH_SelfEraseLvl2Duration:
+  $type: gamedataStatModifierGroup_Record
+  drawBasedOnStatType: False
+  optimiseCombinedModifiers: False
+  saveBasedOnStatType: False
+  statModsLimit: -1
+  relatedModifierGroups: []
+  statModifiers:
+    - BaseStatusEffect.VH_SelfEraseLvl2DurationValue
+
+BaseStatusEffect.VH_SelfEraseLvl2DurationValue:
+  $type: gamedataConstantStatModifier_Record
+  value: 60.0
+  modifierType: Additive
+  statType: BaseStats.MaxDuration
+
+# -----------------------------------------------------------------------------
+# Epic (purple) - 120 s
+# -----------------------------------------------------------------------------
+
+BaseStatusEffect.VH_SelfEraseLvl3:
+  $type: gamedataStatusEffect_Record
+  duration: BaseStatusEffect.VH_SelfEraseLvl3Duration
+  dynamicDuration: False
+  isAffectedByTimeDilationNPC: True
+  isAffectedByTimeDilationPlayer: True
+  maxStacks: RTDB.StatusEffect_inline0
+  reapplyPackagesOnMaxStacks: True
+  removeAllStacksWhenDurationEnds: False
+  removeOnStoryTier: False
+  replicated: True
+  savable: False
+  statusEffectType: BaseStatusEffectTypes.Blind
+  uiData: BaseStatusEffect.VH_SelfEraseUI
+  stopActiveSfxOnDeactivate: True
+  debugTags: []
+  gameplayTags:
+    - Debuff
+    - Quickhack
+    - Stealth
+    - Blind
+    - ClearThreats
+    - VH_SelfErase
+  packages: []
+  SFX: []
+  VFX: []
+
+BaseStatusEffect.VH_SelfEraseLvl3Duration:
+  $type: gamedataStatModifierGroup_Record
+  drawBasedOnStatType: False
+  optimiseCombinedModifiers: False
+  saveBasedOnStatType: False
+  statModsLimit: -1
+  relatedModifierGroups: []
+  statModifiers:
+    - BaseStatusEffect.VH_SelfEraseLvl3DurationValue
+
+BaseStatusEffect.VH_SelfEraseLvl3DurationValue:
+  $type: gamedataConstantStatModifier_Record
+  value: 120.0
+  modifierType: Additive
+  statType: BaseStats.MaxDuration
+
+# -----------------------------------------------------------------------------
+# Legendary (orange) - 180 s
+# -----------------------------------------------------------------------------
+
+BaseStatusEffect.VH_SelfErase:
+  $type: gamedataStatusEffect_Record
+  duration: BaseStatusEffect.VH_SelfEraseDuration
+  dynamicDuration: False
+  isAffectedByTimeDilationNPC: True
+  isAffectedByTimeDilationPlayer: True
+  maxStacks: RTDB.StatusEffect_inline0
+  reapplyPackagesOnMaxStacks: True
+  removeAllStacksWhenDurationEnds: False
+  removeOnStoryTier: False
+  replicated: True
+  savable: False
+  statusEffectType: BaseStatusEffectTypes.Blind
+  uiData: BaseStatusEffect.VH_SelfEraseUI
+  stopActiveSfxOnDeactivate: True
+  debugTags: []
+  gameplayTags:
+    - Debuff
+    - Quickhack
+    - Stealth
+    - Blind
+    - ClearThreats
+    - VH_SelfErase
+  packages: []
+  SFX: []
+  VFX: []
+
+BaseStatusEffect.VH_SelfEraseDuration:
+  $type: gamedataStatModifierGroup_Record
+  drawBasedOnStatType: False
+  optimiseCombinedModifiers: False
+  saveBasedOnStatType: False
+  statModsLimit: -1
+  relatedModifierGroups: []
+  statModifiers:
+    - BaseStatusEffect.VH_SelfEraseDurationValue
+
+BaseStatusEffect.VH_SelfEraseDurationValue:
+  $type: gamedataConstantStatModifier_Record
+  value: 180.0
+  modifierType: Additive
+  statType: BaseStats.MaxDuration
+# -----------------------------------------------------------------------------
+# Status icon shown on the affected target
+# iconPath resolves to UIIcon.<name>, exactly like the reference mod does it
+# (Gravitational Pull: iconPath GravitationalPullStatusUI -> UIIcon record ->
+#  its own inkatlas). Ours points at the atlas we already ship.
+# -----------------------------------------------------------------------------
+
+BaseStatusEffect.VH_SelfEraseUI:
+  $type: gamedataStatusEffectUIData_Record
+  description: ''
+  displayName: LocKey#990800001
+  fluffText: ''
+  iconPath: VH_SelfEraseIcon
+  priority: -9
+  floatValues: []
+  intValues: []
+  nameValues: []
+  stats: []
