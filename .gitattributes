@@ -1,0 +1,8 @@
+﻿# keep text files LF so a clone matches the working tree byte for byte
+* text=auto eol=lf
+
+# engine binaries must never be converted
+*.archive binary
+*.xbm binary
+*.inkatlas binary
+*.png binary
