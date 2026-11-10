@@ -1,0 +1,111 @@
+# =============================================================================
+#  XY Quick Hack - crafting recipes (图纸)
+# =============================================================================
+#  Mirrors the vanilla quickhack recipe chain, so the hacks can be obtained
+#  from access points and crafted at a crafting station exactly like vanilla
+#  programs.
+#
+#  Vanilla structure (items\crafting\quickhacks_recipes.tweak):
+#     Recipe_EMPOverloadLvl4Program : Level4QuickHackRecipe
+#     {
+#         displayName = "LocKey#27968";
+#         craftingResult = { item = "Items.EMPOverloadLvl4Program"; };
+#     }
+#     [ notQueryable ]
+#     EMPOverloadLvl4CraftingPackage : LegendaryProgramCraftingPackage { }
+#
+#  And the program item carries:
+#     CraftingData = "Items.EMPOverloadLvl4CraftingPackage"
+#
+#  The access-point reward pool (accessPointController.GetQuickhackReward) reads
+#  hardcoded arrays:
+#     Items.AllRareProgramsRecipes.recipes       (player level 14-21)
+#     Items.AllEpicProgramsRecipes.recipes       (22-29)
+#     Items.AllLegendaryProgramsRecipes.recipes  (30+)
+#  so our recipes have to be appended to those as well.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Crafting packages - ingredients are inherited from the vanilla quality bases
+#   RareProgramCraftingPackage      30x QuickHackRareMaterial1
+#   EpicProgramCraftingPackage      25x QuickHackEpicMaterial1
+#   LegendaryProgramCraftingPackage 12x QuickHackLegendaryMaterial1
+# -----------------------------------------------------------------------------
+
+Items.VH_SelfEraseLvl2CraftingPackage:
+  $base: Items.RareProgramCraftingPackage
+
+Items.VH_SelfEraseLvl3CraftingPackage:
+  $base: Items.EpicProgramCraftingPackage
+
+Items.VH_SelfEraseCraftingPackage:
+  $base: Items.LegendaryProgramCraftingPackage
+
+Items.VH_HackSpreadCraftingPackage:
+  $base: Items.LegendaryProgramCraftingPackage
+
+# -----------------------------------------------------------------------------
+# Crafting results (CraftingResult_Record). Named records instead of inline
+# mappings so the fk<CraftingResult> fields resolve by name.
+# -----------------------------------------------------------------------------
+
+Items.VH_SelfEraseLvl2Result:
+  $type: CraftingResult_Record
+  item: Items.VH_SelfEraseLvl2Program
+  amount: 1
+
+Items.VH_SelfEraseLvl3Result:
+  $type: CraftingResult_Record
+  item: Items.VH_SelfEraseLvl3Program
+  amount: 1
+
+Items.VH_SelfEraseResult:
+  $type: CraftingResult_Record
+  item: Items.VH_SelfEraseProgram
+  amount: 1
+
+Items.VH_HackSpreadResult:
+  $type: CraftingResult_Record
+  item: Items.VH_HackSpreadProgram
+  amount: 1
+
+# -----------------------------------------------------------------------------
+# Recipes
+# -----------------------------------------------------------------------------
+
+Items.Recipe_VH_SelfEraseLvl2Program:
+  $base: Items.Level2QuickHackRecipe
+  displayName: LocKey#990800001
+  craftingResult: Items.VH_SelfEraseLvl2Result
+
+Items.Recipe_VH_SelfEraseLvl3Program:
+  $base: Items.Level3QuickHackRecipe
+  displayName: LocKey#990800001
+  craftingResult: Items.VH_SelfEraseLvl3Result
+
+Items.Recipe_VH_SelfEraseProgram:
+  $base: Items.Level4QuickHackRecipe
+  displayName: LocKey#990800001
+  craftingResult: Items.VH_SelfEraseResult
+
+Items.Recipe_VH_HackSpreadProgram:
+  $base: Items.Level4QuickHackRecipe
+  displayName: LocKey#990800003
+  craftingResult: Items.VH_HackSpreadResult
+
+# -----------------------------------------------------------------------------
+# Register the recipes into the access-point reward pools
+# -----------------------------------------------------------------------------
+
+Items.AllRareProgramsRecipes:
+  recipes:
+    - !append-once Items.Recipe_VH_SelfEraseLvl2Program
+
+Items.AllEpicProgramsRecipes:
+  recipes:
+    - !append-once Items.Recipe_VH_SelfEraseLvl3Program
+
+Items.AllLegendaryProgramsRecipes:
+  recipes:
+    - !append-once Items.Recipe_VH_SelfEraseProgram
+    - !append-once Items.Recipe_VH_HackSpreadProgram

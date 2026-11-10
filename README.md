@@ -104,6 +104,13 @@ Cyberpunk 2077\archive\pc\mod\XY_QuickHack_icons.archive
 
 ## 7. 版本
 
+**1.0.2 Beta** — 新增制作图纸（配方），可以从接入点破译获取、也能在制作台制作。**未经验证**。
+
+- 每条破解都配了原版同类型的配方：`Level2/3/4QuickHackRecipe` + `Rare/Epic/LegendaryProgramCraftingPackage`
+- 材料消耗与同品质原版破解一致：蓝 30× 稀有材料、紫 25× 史诗材料、橙 12× 传说材料
+- 配方已追加进接入点的奖励池 `AllRare/Epic/LegendaryProgramsRecipes`，按等级窗口（14 / 22 / 30 级）出现
+- 图纸本身也能在制作商人处买到（继承原版 `Price.*QuickhackSchematics` 定价）
+
 **1.0** — 首个正式版（已实测确认）。
 
 - 三档自我擦除（蓝 60 / 紫 120 / 橙 180 秒）

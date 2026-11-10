@@ -26,6 +26,7 @@ Items.VH_SelfEraseLvl2Program:
   displayName: LocKey#990800001
   localizedDescription: LocKey#990800002
   quality: Quality.Rare
+  CraftingData: Items.VH_SelfEraseLvl2CraftingPackage
   shardType: VH_SelfErase
   icon: UIIcon.VH_SelfEraseIcon
   iconPath: VH_SelfEraseIcon
@@ -51,6 +52,7 @@ Items.VH_SelfEraseLvl3Program:
   displayName: LocKey#990800001
   localizedDescription: LocKey#990800002
   quality: Quality.Epic
+  CraftingData: Items.VH_SelfEraseLvl3CraftingPackage
   shardType: VH_SelfErase
   icon: UIIcon.VH_SelfEraseIcon
   iconPath: VH_SelfEraseIcon
@@ -76,6 +78,7 @@ Items.VH_SelfEraseProgram:
   displayName: LocKey#990800001
   localizedDescription: LocKey#990800002
   quality: Quality.Legendary
+  CraftingData: Items.VH_SelfEraseCraftingPackage
   shardType: VH_SelfErase
   icon: UIIcon.VH_SelfEraseIcon
   iconPath: VH_SelfEraseIcon
@@ -101,6 +104,7 @@ Items.VH_HackSpreadProgram:
   displayName: LocKey#990800003
   localizedDescription: LocKey#990800004
   quality: Quality.Legendary
+  CraftingData: Items.VH_HackSpreadCraftingPackage
   shardType: VH_HackSpread
   icon: UIIcon.VH_HackSpreadIcon
   iconPath: VH_HackSpreadIcon
